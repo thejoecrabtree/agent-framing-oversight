@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "adopted": "2026-09-27",
+  "adoptedBy": "the owner",
+  "about": "What the Lab may do on its own. Agents act freely inside these rules; anything outside becomes a decision card. the owner changes the rules on Board day. Built from AUTHORITY.md (2026-09-03), standing-approvals.json (2026-09-04..15), business.mjs (2026-09-26) and the Lab Autopilot answers (2026-09-27).",
+  "people": {
+    "owner": {
+      "name": "Owner",
+      "holds": [
+        "safety",
+        "legal",
+        "money",
+        "product",
+        "people",
+        "secrets",
+        "platform"
+      ],
+      "why": "Owner and the adult."
+    },
+    "maker": {
+      "name": "Maker",
+      "holds": [
+        "social",
+        "lab-notes",
+        "studio"
+      ],
+      "why": "Invents the toys and owns the Lab's voice."
+    }
+  },
+  "budget": {
+    "decisionsPerDay": 3,
+    "maxWaitHours": 72,
+    "why": "Fewer, better questions. A card either defaults, escalates once, or expires with a note."
+  },
+  "money": {
+    "perPurchase": 150,
+    "perMonth": 400,
+    "categories": [
+      "filament",
+      "spares",
+      "packaging",
+      "postage",
+      "market-fees-budgeted"
+    ],
+    "buyingStopsAtCart": true,
+    "refundsAlwaysAsk": true,
+    "why": "Answer 2, 2026-09-27. Purchases stop at the cart for a person's tap until the owner changes buyingStopsAtCart."
+  },
+  "levels": {
+    "0": "always ask",
+    "1": "ask, with a default after a set time",
+    "2": "do it, with a recall window",
+    "3": "just do it and log it"
+  },
+  "classes": {
+    "safety.decision": {
+      "level": 0,
+      "fixed": true,
+      "owner": "owner",
+      "area": "safety",
+      "why": "Child safety, CPC, choking and age grading never default and never auto-promote."
+    },
+    "legal.decision": {
+      "level": 0,
+      "fixed": true,
+      "owner": "owner",
+      "area": "safety",
+      "why": "Filings, signatures, regulators, lawyers, privacy and terms. Guard drafts, a person sends."
+    },
+    "money.spend": {
+      "level": 1,
+      "defaultAfterHours": 24,
+      "default": "put it in the cart, a person buys",
+      "owner": "owner",
+      "area": "money",
+      "promoteAfter": 4,
+      "cap": "perPurchase",
+      "why": "Inside the cap and an approved category. Over the cap becomes money.over-cap."
+    },
+    "money.over-cap": {
+      "level": 0,
+      "fixed": true,
+      "owner": "owner",
+      "area": "money",
+      "why": "Over $150 a purchase or $400 a month."
+    },
+    "money.recurring": {
+      "level": 0,
+      "fixed": true,
+      "owner": "owner",
+      "area": "money",
+      "why": "Any new subscription, licence or plan."
+    },
+    "money.refund": {
+      "level": 0,
+      "fixed": true,
+      "owner": "owner",
+      "area": "money",
+      "why": "Refunds are always a person's."
+    },
+    "money.price": {
+      "level": 0,
+      "fixed": true,
+      "owner": "owner",
+      "area": "money",
+      "why": "A price or discount change on a live product."
+    },
+    "product.launch": {
+      "level": 0,
+      "fixed": true,
+      "owner": "owner",
+      "area": "decisions",
+      "why": "A new toy goes on sale only after the Studio safety check, with the owner's signature."
+    },
+    "customer.reply.known": {
+      "level": 3,
+      "owner": "owner",
+      "area": "customers",
+      "why": "Order status and answers already on help.html, terms or the order record (was inbox-routine)."
+    },
+    "customer.reply.new": {
+      "level": 1,
+      "defaultAfterHours": 4,
+      "default": "send the drafted reply",
+      "owner": "owner",
+      "area": "customers",
+      "promoteAfter": 10,
+      "why": "Answer 3, 2026-09-27: silence means send after 4 h."
+    },
+    "customer.text.reply": {
+      "level": 2,
+      "recallMinutes": 5,
+      "owner": "owner",
+      "area": "customers",
+      "why": "Was sms-routine (2026-09-10)."
+    },
+    "customer.text.ack": {
+      "level": 3,
+      "owner": "owner",
+      "area": "customers",
+      "why": "The fixed acknowledgement template only (was sms-ack)."
+    },
+    "market.email": {
+      "level": 1,
+      "defaultAfterHours": 24,
+      "default": "send the drafted email",
+      "owner": "owner",
+      "area": "markets",
+      "promoteAfter": 5,
+      "why": "Answer 3, 2026-09-27. Anything with a fee is money.spend."
+    },
+    "market.comms": {
+      "level": 1,
+      "defaultAfterHours": 12,
+      "default": "send it",
+      "owner": "owner",
+      "area": "markets",
+      "promoteAfter": 5,
+      "why": "Countdowns and thank-yous for a market booked and paid. Shadow run 2026-09-27: 2 of 5 rejected because the Leander market had been cancelled; stays at ask until the gateway checks the booking itself.",
+      "earnedRecallMinutes": 15
+    },
+    "market.commit": {
+      "level": 0,
+      "owner": "owner",
+      "area": "markets",
+      "why": "Booking, withdrawing or changing a market the Lab is committed to."
+    },
+    "email.list": {
+      "level": 0,
+      "owner": "owner",
+      "area": "going-out",
+      "why": "Any email to a list."
+    },
+    "social.post": {
+      "level": 1,
+      "defaultAfterHours": 24,
+      "default": "hold, not posted",
+      "owner": "maker",
+      "area": "going-out",
+      "promoteAfter": 5,
+      "why": "A post in an approved series with a real photo or approved reel (was social-queue). Shadow run 2026-09-27: all 4 series posts got changes, so it starts at ask and earns the 1 h recall after 5 clean.",
+      "earnedRecallMinutes": 60
+    },
+    "social.new": {
+      "level": 1,
+      "defaultAfterHours": 24,
+      "default": "hold, not posted",
+      "owner": "maker",
+      "area": "going-out",
+      "why": "A post outside an approved series. Silence means it waits."
+    },
+    "social.engage": {
+      "level": 3,
+      "owner": "maker",
+      "area": "going-out",
+      "why": "Likes and comments on X and Instagram (x-engagement, ig-engagement). Don't get flagged."
+    },
+    "social.mirror": {
+      "level": 3,
+      "owner": "maker",
+      "area": "going-out",
+      "why": "Every Instagram reel also goes to YouTube as a Short (youtube-mirror)."
+    },
+    "blog.post": {
+      "level": 1,
+      "defaultAfterHours": 24,
+      "default": "hold, not published",
+      "owner": "maker",
+      "area": "going-out",
+      "promoteAfter": 3,
+      "why": "Lab Notes on the calendar; the claims gate still runs. Shadow run 2026-09-27: 1 of 5 approved as written, so it starts at ask and earns the 2 h recall after 3 clean.",
+      "earnedRecallMinutes": 120
+    },
+    "press.partner": {
+      "level": 0,
+      "owner": "owner",
+      "area": "going-out",
+      "why": "Press replies, partnerships, ads, giveaways, new claims about the business."
+    },
+    "site.deploy": {
+      "level": 3,
+      "owner": "owner",
+      "area": "decisions",
+      "why": "Content, fixes and approved-plan features, only through the clean-worktree deploy and the claims gate."
+    },
+    "site.feature": {
+      "level": 0,
+      "owner": "owner",
+      "area": "decisions",
+      "why": "New customer-facing features, or anything touching payment, checkout, login or data collection."
+    },
+    "farm.plan": {
+      "level": 3,
+      "owner": "owner",
+      "area": "decisions",
+      "why": "Scheduling and re-planning prints. Printer safety checks are never overridden."
+    },
+    "business.decision": {
+      "level": 1,
+      "defaultAfterHours": 72,
+      "default": "adopt the recommendation",
+      "owner": "owner",
+      "area": "decisions",
+      "why": "Everything else that needs a call: the recommendation stands if nobody objects in 3 days."
+    },
+    "crew.internal": {
+      "level": 3,
+      "owner": "owner",
+      "area": "crew",
+      "why": "Agents' own tools, schemas, deploys of internal code. Never reaches a person."
+    },
+    "hands.task": {
+      "level": 3,
+      "owner": "owner",
+      "area": "hands",
+      "why": "Physical work goes to the Lab wall as walks, not to the decision queue."
+    },
+    "drop.marketing": {
+      "level": 3,
+      "owner": "owner",
+      "area": "crew",
+      "why": "Mailing lists and sales pitches need no answer; don't draft replies."
+    }
+  },
+  "never": [
+    {
+      "id": "child-message",
+      "text": "Message a child.",
+      "match": "\\b(message|text|dm|email)\\b.{0,40}\\b(child|kid|minor)\\b"
+    },
+    {
+      "id": "card-details",
+      "text": "Enter card or bank details, or move money between accounts.",
+      "match": "\\b(card number|cvv|routing number|bank transfer|wire transfer)\\b"
+    },
+    {
+      "id": "no-cpc",
+      "text": "Sell a product without a CPC.",
+      "tag": "no-cpc"
+    },
+    {
+      "id": "secrets",
+      "text": "See, store or repeat a secret value.",
+      "match": "\\b(api[_ -]?key|password|secret|token)\\s*[:=]\\s*\\S{8,}"
+    },
+    {
+      "id": "illustration",
+      "text": "Use an illustration as a product photo.",
+      "tag": "illustration-as-photo"
+    },
+    {
+      "id": "fake-promise",
+      "text": "Promise a date, price or feature that is not real.",
+      "tag": "unverified-promise"
+    },
+    {
+      "id": "printer-override",
+      "text": "Override a printer's safety check or send IGNORE_* to a printer.",
+      "match": "\\bIGNORE_[A-Z_]+\\b"
+    }
+  ],
+  "channels": {
+    "slack": "retire once Pulse is live (answer 4, 2026-09-27)",
+    "texts": "urgent only: safety, fire, a customer waiting over a day",
+    "pulse": "the only place a person is asked anything"
+  },
+  "checks": {
+    "unverified": "An action tagged 'unverified' (a draft that cites something not on the record) is always asked, with no default, whatever its class. Shadow run 2026-09-27: a text quoting an insurance figure not in the facts."
+  }
+}
