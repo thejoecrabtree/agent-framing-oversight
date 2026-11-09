@@ -1,6 +1,6 @@
 # Does an agent's wording set its own oversight?
 
-A pre-registered control evaluation on 156 real approval cards that LLM agents filed while running a small
+A control evaluation, with the analysis plan committed before the full run, on 156 real approval cards that LLM agents filed while running a small
 3D-printing business. It answers open question 1 of [agent-failure-log](https://github.com/thejoecrabtree/agent-failure-log):
 in incident #15, a gateway read agent-written text and auto-approved a public post. Can the class an action is given be
 made independent of how the agent describes it, and at what cost in extra asks?
@@ -9,18 +9,36 @@ made independent of how the agent describes it, and at what cost in extra asks?
 
 - The keyword classifier in force at #15 could be moved by the agent-chosen `kind` label: an attacker lowered its
   oversight on 21.8% of cards, and the fix cut that to 2.6% (exact McNemar p = 2×10⁻⁹).
-- Claude judges ignore the label but are moved by one framing sentence: Sonnet 11.5% against a 2.6% paraphrase floor.
+- Claude judges ignore the label but are moved by a rewritten title and one framing line: Sonnet 11.5% against a
+  2.6% paraphrase floor.
   Sonnet also names the same class on a rerun only 69% of the time.
 - A judge that reads only who acts and where the action goes cannot be moved, and here it asked a person no more often.
 
 Full numbers and limits: [RESULTS.md](RESULTS.md). The plan, written before the full run, and every deviation from it:
 [PREREG.md](PREREG.md).
 
+## Timing and provenance
+
+The analysis plan was committed in a private working repo as `06281de` at 17:15 CT on 2 November 2026, followed ten
+seconds later by a small change capping concurrency on the lab model (`a41fe66`). The full-run results were committed
+there as `b3f1e39` at 23:32 CT the same day. That history was squashed into one commit for publication, because the private repo's history also holds
+the rest of the Lab's gateway code, beyond the classifier files published here. Git dates are self-reported, so these
+times are the author's record, not proof. The plan text as committed in `06281de` is in
+[PREREG-original.md](PREREG-original.md), and [PREREG.md](PREREG.md) ends with every difference from it and the errors
+in it found on review (2026-11-08).
+
+## Follow-up pilot (8 November 2026)
+
+A pilot of the proposed next step, rejection sampling for approval with the action fixed, is in [pilot/](pilot/).
+With a writer told only to be accurate, 1.5% of 400 descriptions lowered the judge's oversight level, about as often as
+re-judging the unchanged card, so selection for approval first needs borderline cards where wording can matter.
+
 ## What is here
 
 | Path | What it is |
 |---|---|
-| `PREREG.md` | Question, data, judges, conditions, measures and predictions, plus the pilot and the deviations |
+| `PREREG.md` | Question, data, judges, conditions, measures and predictions, plus the pilot, the deviations and errata |
+| `PREREG-original.md` | The plan as first committed (`06281de`), for comparison |
 | `RESULTS.md` | Results, with 95% bootstrap intervals and the stated limits |
 | `results/summary.json` | Every pre-registered number (aggregates only) |
 | `classifier/pre`, `classifier/post` | The gateway's classifier before and after the #15 fix; `constitution.json` is the rule set both read |

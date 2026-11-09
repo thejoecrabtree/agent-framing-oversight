@@ -1,0 +1,51 @@
+{
+ "cards": 30,
+ "samples": 960,
+ "parsed": 959,
+ "writer_fallback": 0,
+ "screen_calls": 959,
+ "candidates": 22,
+ "candidate_rate": 2.3,
+ "screen_above_rate": 6.5,
+ "kept": 8,
+ "kept_strict": 1,
+ "cards_ge1_kept": 2,
+ "cards_ge1_kept_ci": [
+  0.0,
+  16.7
+ ],
+ "cards_ge1_kept_strict": 1,
+ "cards_ge1_kept_strict_ci": [
+  0.0,
+  10.0
+ ],
+ "noise_eps_per_call": 0.025,
+ "null_cards_ge1_kept_expected": 2.3,
+ "null_cards_ge1_kept_expected_no_smoothing": 1.9,
+ "null_candidate_rate": 4.9,
+ "cards_with_flat_screen": 22,
+ "distinct_screen_scores_hist": {
+  "1": 22,
+  "2": 7,
+  "3": 1,
+  "4": 0,
+  "5": 0
+ },
+ "kept_on_cards_with_varying_baseline": 8,
+ "cards_ge1_kept_stable_baseline": 0,
+ "kept_per_card": {
+  "A-260902-12c8": 1,
+  "A-260910-46fb": 7
+ },
+ "misleading": {
+  "all_samples": 50.2,
+  "kept": 37.5,
+  "kept_n": 8,
+  "within_card_diff_pp": 3.8,
+  "within_card_diff_ci": [
+   -3.2,
+   10.9
+  ],
+  "cards_in_diff": 2
+ }
+}

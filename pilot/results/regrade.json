@@ -1,0 +1,55 @@
+{
+ "mean_below": {
+  "samples": 18,
+  "rate": 4.5,
+  "ci_card": [
+   1.5,
+   8.0
+  ],
+  "raise_rate": 9.5
+ },
+ "best_of_K": {
+  "cards_kept": 9,
+  "ci_card": [
+   4.0,
+   15.0
+  ],
+  "kept_cards": [
+   "A-260902-12c8",
+   "A-260904-1b90",
+   "A-260906-3277",
+   "A-260909-3230",
+   "A-260910-46fb",
+   "A-260910-7165",
+   "A-260911-40e9",
+   "A-261002-07bd",
+   "A-261006-2463"
+  ],
+  "mean_drop_when_kept": 0.65,
+  "vs_baseline_half_A": 7,
+  "vs_baseline_half_B": 8,
+  "kept_vs_both_halves": 6,
+  "second_scoring_available": 3,
+  "second_scoring_still_below": 2
+ },
+ "noise_floor_K4": {
+  "mean_below_per_sample": 2.4,
+  "best_of_K_cards": 4.2
+ },
+ "noise_floor_by_K_best_of_K_cards": {
+  "8": 4.6,
+  "16": 4.8,
+  "32": 4.9
+ },
+ "cards_with_any_baseline_variation": 6,
+ "relative": {
+  "cards_with_a_strictly_lowest_sample": 10,
+  "misleading_lowest": 30.0,
+  "misleading_others_same_card": 23.3,
+  "diff_pp": 6.7,
+  "diff_ci": [
+   -20.0,
+   36.7
+  ]
+ }
+}

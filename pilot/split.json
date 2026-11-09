@@ -1,0 +1,631 @@
+{
+ "cards": {
+  "A-260902-12c8": {
+   "group": 64,
+   "side": "train"
+  },
+  "A-260902-132e": {
+   "group": 0,
+   "side": "heldout"
+  },
+  "A-260902-14ee": {
+   "group": 25,
+   "side": "heldout"
+  },
+  "A-260902-195a": {
+   "group": 64,
+   "side": "train"
+  },
+  "A-260902-1bfe": {
+   "group": 2,
+   "side": "train"
+  },
+  "A-260902-1eb1": {
+   "group": 65,
+   "side": "train"
+  },
+  "A-260902-2007": {
+   "group": 11,
+   "side": "train"
+  },
+  "A-260902-2496": {
+   "group": 1,
+   "side": "heldout"
+  },
+  "A-260902-2553": {
+   "group": 10,
+   "side": "heldout"
+  },
+  "A-260902-2734": {
+   "group": 2,
+   "side": "train"
+  },
+  "A-260902-343c": {
+   "group": 65,
+   "side": "train"
+  },
+  "A-260902-3f35": {
+   "group": 11,
+   "side": "train"
+  },
+  "A-260902-4202": {
+   "group": 8,
+   "side": "train"
+  },
+  "A-260902-4ab8": {
+   "group": 64,
+   "side": "train"
+  },
+  "A-260902-4b42": {
+   "group": 3,
+   "side": "train"
+  },
+  "A-260902-5012": {
+   "group": 4,
+   "side": "train"
+  },
+  "A-260902-5067": {
+   "group": 5,
+   "side": "train"
+  },
+  "A-260902-5388": {
+   "group": 64,
+   "side": "train"
+  },
+  "A-260902-58ee": {
+   "group": 6,
+   "side": "train"
+  },
+  "A-260902-6367": {
+   "group": 7,
+   "side": "train"
+  },
+  "A-260902-638e": {
+   "group": 8,
+   "side": "train"
+  },
+  "A-260902-64e6": {
+   "group": 12,
+   "side": "train"
+  },
+  "A-260902-75ac": {
+   "group": 11,
+   "side": "train"
+  },
+  "A-260902-7985": {
+   "group": 9,
+   "side": "train"
+  },
+  "A-260902-79ec": {
+   "group": 10,
+   "side": "heldout"
+  },
+  "A-260902-7e15": {
+   "group": 11,
+   "side": "train"
+  },
+  "A-260902-7f5d": {
+   "group": 12,
+   "side": "train"
+  },
+  "A-260902-7ff6": {
+   "group": 64,
+   "side": "train"
+  },
+  "A-260903-0cbe": {
+   "group": 13,
+   "side": "heldout"
+  },
+  "A-260903-1e4a": {
+   "group": 14,
+   "side": "train"
+  },
+  "A-260903-299c": {
+   "group": 15,
+   "side": "train"
+  },
+  "A-260903-3219": {
+   "group": 16,
+   "side": "train"
+  },
+  "A-260903-3ca0": {
+   "group": 17,
+   "side": "train"
+  },
+  "A-260903-3f2b": {
+   "group": 18,
+   "side": "train"
+  },
+  "A-260903-6841": {
+   "group": 19,
+   "side": "train"
+  },
+  "A-260903-77db": {
+   "group": 20,
+   "side": "train"
+  },
+  "A-260904-07d8": {
+   "group": 21,
+   "side": "train"
+  },
+  "A-260904-0a9c": {
+   "group": 22,
+   "side": "train"
+  },
+  "A-260904-1376": {
+   "group": 23,
+   "side": "train"
+  },
+  "A-260904-1b90": {
+   "group": 24,
+   "side": "train"
+  },
+  "A-260904-2ee6": {
+   "group": 28,
+   "side": "heldout"
+  },
+  "A-260904-3007": {
+   "group": 25,
+   "side": "heldout"
+  },
+  "A-260904-3042": {
+   "group": 26,
+   "side": "train"
+  },
+  "A-260904-35e1": {
+   "group": 27,
+   "side": "train"
+  },
+  "A-260904-3a5f": {
+   "group": 28,
+   "side": "heldout"
+  },
+  "A-260904-3dc5": {
+   "group": 29,
+   "side": "train"
+  },
+  "A-260904-4e74": {
+   "group": 30,
+   "side": "train"
+  },
+  "A-260904-547a": {
+   "group": 31,
+   "side": "heldout"
+  },
+  "A-260904-5a95": {
+   "group": 32,
+   "side": "train"
+  },
+  "A-260904-5e08": {
+   "group": 33,
+   "side": "heldout"
+  },
+  "A-260904-712a": {
+   "group": 34,
+   "side": "train"
+  },
+  "A-260904-7eb0": {
+   "group": 35,
+   "side": "train"
+  },
+  "A-260906-114d": {
+   "group": 37,
+   "side": "train"
+  },
+  "A-260906-3277": {
+   "group": 37,
+   "side": "train"
+  },
+  "A-260909-1158": {
+   "group": 41,
+   "side": "heldout"
+  },
+  "A-260909-1930": {
+   "group": 36,
+   "side": "train"
+  },
+  "A-260909-3230": {
+   "group": 37,
+   "side": "train"
+  },
+  "A-260909-483a": {
+   "group": 37,
+   "side": "train"
+  },
+  "A-260909-4ecd": {
+   "group": 38,
+   "side": "heldout"
+  },
+  "A-260909-5ab2": {
+   "group": 39,
+   "side": "train"
+  },
+  "A-260909-6fb4": {
+   "group": 40,
+   "side": "train"
+  },
+  "A-260910-0a6d": {
+   "group": 41,
+   "side": "heldout"
+  },
+  "A-260910-0fb7": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260910-18b9": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260910-2631": {
+   "group": 42,
+   "side": "heldout"
+  },
+  "A-260910-2dff": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260910-40bc": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260910-4285": {
+   "group": 43,
+   "side": "train"
+  },
+  "A-260910-46db": {
+   "group": 44,
+   "side": "train"
+  },
+  "A-260910-46fb": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260910-4ce6": {
+   "group": 45,
+   "side": "train"
+  },
+  "A-260910-4e0c": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260910-4f12": {
+   "group": 46,
+   "side": "train"
+  },
+  "A-260910-7165": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260911-06d1": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-0a34": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-18ed": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-1dd8": {
+   "group": 47,
+   "side": "heldout"
+  },
+  "A-260911-1eae": {
+   "group": 48,
+   "side": "train"
+  },
+  "A-260911-207d": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-2616": {
+   "group": 48,
+   "side": "train"
+  },
+  "A-260911-335d": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-3d73": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-40e9": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260911-431c": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-4f6e": {
+   "group": 47,
+   "side": "heldout"
+  },
+  "A-260911-52c9": {
+   "group": 48,
+   "side": "train"
+  },
+  "A-260911-534d": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-67c9": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-67d3": {
+   "group": 49,
+   "side": "heldout"
+  },
+  "A-260911-6f09": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260911-7e4e": {
+   "group": 50,
+   "side": "heldout"
+  },
+  "A-260912-01a3": {
+   "group": 51,
+   "side": "heldout"
+  },
+  "A-260912-0aac": {
+   "group": 54,
+   "side": "heldout"
+  },
+  "A-260912-0b36": {
+   "group": 54,
+   "side": "heldout"
+  },
+  "A-260912-1f14": {
+   "group": 52,
+   "side": "train"
+  },
+  "A-260912-39f0": {
+   "group": 54,
+   "side": "heldout"
+  },
+  "A-260912-4042": {
+   "group": 54,
+   "side": "heldout"
+  },
+  "A-260912-4835": {
+   "group": 53,
+   "side": "train"
+  },
+  "A-260912-4e25": {
+   "group": 54,
+   "side": "heldout"
+  },
+  "A-260912-5aba": {
+   "group": 53,
+   "side": "train"
+  },
+  "A-260912-6447": {
+   "group": 54,
+   "side": "heldout"
+  },
+  "A-260912-6974": {
+   "group": 54,
+   "side": "heldout"
+  },
+  "A-260912-6ad5": {
+   "group": 54,
+   "side": "heldout"
+  },
+  "A-260913-014e": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260914-0b0f": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260914-4b47": {
+   "group": 55,
+   "side": "heldout"
+  },
+  "A-260914-787d": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260915-0c5d": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260915-2a48": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260916-0c64": {
+   "group": 57,
+   "side": "heldout"
+  },
+  "A-260916-21ad": {
+   "group": 56,
+   "side": "train"
+  },
+  "A-260916-3ec5": {
+   "group": 63,
+   "side": "train"
+  },
+  "A-260916-616b": {
+   "group": 57,
+   "side": "heldout"
+  },
+  "A-260917-0c16": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260917-731d": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-260917-7df3": {
+   "group": 63,
+   "side": "train"
+  },
+  "A-260918-0a6e": {
+   "group": 58,
+   "side": "train"
+  },
+  "A-260918-6021": {
+   "group": 59,
+   "side": "heldout"
+  },
+  "A-260919-361c": {
+   "group": 60,
+   "side": "heldout"
+  },
+  "A-260919-4925": {
+   "group": 61,
+   "side": "train"
+  },
+  "A-260921-6861": {
+   "group": 62,
+   "side": "train"
+  },
+  "A-260922-28df": {
+   "group": 63,
+   "side": "train"
+  },
+  "A-260923-07d0": {
+   "group": 64,
+   "side": "train"
+  },
+  "A-260924-15b5": {
+   "group": 64,
+   "side": "train"
+  },
+  "A-260924-4740": {
+   "group": 65,
+   "side": "train"
+  },
+  "A-260925-784b": {
+   "group": 66,
+   "side": "train"
+  },
+  "A-260926-502f": {
+   "group": 67,
+   "side": "train"
+  },
+  "A-260926-7090": {
+   "group": 67,
+   "side": "train"
+  },
+  "A-260926-7e39": {
+   "group": 68,
+   "side": "train"
+  },
+  "A-260927-4c3f": {
+   "group": 68,
+   "side": "train"
+  },
+  "A-260928-241b": {
+   "group": 69,
+   "side": "heldout"
+  },
+  "A-260928-3e06": {
+   "group": 70,
+   "side": "heldout"
+  },
+  "A-260928-3f7e": {
+   "group": 70,
+   "side": "heldout"
+  },
+  "A-260928-4347": {
+   "group": 70,
+   "side": "heldout"
+  },
+  "A-260928-62e7": {
+   "group": 71,
+   "side": "train"
+  },
+  "A-260928-72b5": {
+   "group": 72,
+   "side": "train"
+  },
+  "A-260929-0939": {
+   "group": 73,
+   "side": "train"
+  },
+  "A-260929-0d4d": {
+   "group": 74,
+   "side": "train"
+  },
+  "A-260929-2edd": {
+   "group": 75,
+   "side": "train"
+  },
+  "A-260929-3b24": {
+   "group": 77,
+   "side": "heldout"
+  },
+  "A-260929-59f7": {
+   "group": 76,
+   "side": "heldout"
+  },
+  "A-260929-6028": {
+   "group": 77,
+   "side": "heldout"
+  },
+  "A-261002-07bd": {
+   "group": 78,
+   "side": "train"
+  },
+  "A-261005-5f18": {
+   "group": 79,
+   "side": "heldout"
+  },
+  "A-261005-7ba1": {
+   "group": 79,
+   "side": "heldout"
+  },
+  "A-261006-00f9": {
+   "group": 80,
+   "side": "heldout"
+  },
+  "A-261006-1e23": {
+   "group": 81,
+   "side": "heldout"
+  },
+  "A-261006-2463": {
+   "group": 82,
+   "side": "train"
+  },
+  "A-261009-1b0e": {
+   "group": 83,
+   "side": "train"
+  },
+  "A-261009-62e8": {
+   "group": 84,
+   "side": "heldout"
+  },
+  "A-261011-6781": {
+   "group": 85,
+   "side": "train"
+  },
+  "A-261020-2104": {
+   "group": 86,
+   "side": "heldout"
+  },
+  "A-261022-0764": {
+   "group": 87,
+   "side": "train"
+  },
+  "A-261023-16ae": {
+   "group": 88,
+   "side": "train"
+  },
+  "A-261029-5484": {
+   "group": 89,
+   "side": "heldout"
+  }
+ },
+ "jaccard": 0.5,
+ "seed": 20261108,
+ "target_train": 100
+}

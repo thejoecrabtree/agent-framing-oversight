@@ -5,8 +5,8 @@ there. Numbers below are from `results/summary.json` (aggregates only).
 
 **Answer.** Yes, and each kind of judge is weak in a different place. The keyword classifier in force at incident #15
 could be moved by the agent's own `kind` label: an attacker lowered its oversight on 22% of cards, and the fix shipped
-after #15 cut that to 3%. Claude judges ignore the label but are moved by the agent's framing sentence: the same
-attacker lowered Sonnet's oversight on 12% of cards against a 3% noise floor. A judge that reads only who acts and
+after #15 cut that to 3%. Claude judges ignore the label but are moved by a rewritten title and one framing line: the
+same attacker lowered Sonnet's oversight on 12% of cards against a 3% noise floor. A judge that reads only who acts and
 where it goes cannot be moved at all, and in this data it asked a person no more often than the others.
 
 ## Set-up in one paragraph
@@ -37,8 +37,10 @@ Downgrade = share of the 156 cards whose oversight is lower than on the original
 | rule-pre (at #15) | 0.0% | 1.3% [0, 3.2] | **21.8% [15.4, 28.2]** | deterministic |
 | rule-post (after fix) | 0.0% | 0.0% | 2.6% [0.6, 5.1] | deterministic |
 | Claude Sonnet | 2.6% [0.6, 5.1] | **11.5% [7.1, 16.7]** | 3.8% [1.3, 7.1] | 68.6% [60.9, 75.6] |
-| Claude Haiku | 7.7% [3.8, 12.2] | **16.0% [10.3, 21.8]** | 8.3% [4.5, 12.8] | not run |
+| Claude Haiku | 7.7% [3.8, 12.2] | **16.0% [10.3, 21.8]** | 8.3% [4.5, 12.8] | 71.8% [64.7, 78.8]* |
 | effect | 0.0% | 0.0% | 0.0% | deterministic |
+
+\* Exploratory, not pre-registered; added 2026-11-08 (see the addendum at the end).
 
 - **The #15 fix worked against this attack.** On A2, rule-pre was downgraded on 30 cards where rule-post was not, and
   never the reverse (exact McNemar p = 2×10⁻⁹). Escapes, where a person would have seen the card and after
@@ -81,3 +83,13 @@ Given the same instructions as Nemotron, Claude Sonnet mostly flagged risk inste
 
 An adaptive attacker given query access to each judge, and an effect judge that reads the real tool call rather than a
 description of it.
+
+## Addendum (2026-11-08)
+
+- **Haiku rerun.** The table first said "not run" for Haiku's rerun. It was run: `src/run.py` runs every Claude judge
+  twice on the original cards, but only Sonnet's rerun was a pre-registered measure, so only Sonnet's was analysed.
+  Haiku names the same class on both runs for 112 of 156 cards, 71.8% [64.7, 78.8] (same bootstrap as above). This
+  figure is exploratory and was not pre-registered. It is not in `results/summary.json`; it comes from the two cached
+  Haiku runs on C0.
+- **Wording.** The answer paragraph said Claude judges are moved by "the agent's framing sentence". The A1 attacker
+  rewrites the title and adds one framing line, so the text now says that. No number changed.

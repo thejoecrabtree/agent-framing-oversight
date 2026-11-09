@@ -115,3 +115,48 @@ None yet.
    (`--strict-mcp-config`). No judge call attempted a tool.
 5. **LLM judge sampling.** `claude -p` does not expose temperature, so the Claude judges ran at the default. This is
    why self-consistency is measured, and it bounds how much an LLM judge's downgrade can be told apart from noise.
+
+## Errata and deviations (added 2026-11-08)
+
+Added after publication. Nothing above this heading was changed when it was added. The plan as first committed, in the
+private working repo as `06281de` (2026-11-02 17:15 CT), is reproduced in [PREREG-original.md](PREREG-original.md).
+
+**Where this file differs from `06281de`.** Diffing the two gives exactly three differences:
+
+1. Line 3: the original ends with a three-word tooling note, which is left out of the public copy.
+2. Data, labels: the original defines person-decided as "the decision event's `by` is `joseph`"; this copy says "names
+   the owner". Same rule, reworded: `src/extract.py` tests `by == "joseph"`.
+3. The subsection "After the first full run (2026-11-02), before any result was used" was added in the results commit
+   (`b3f1e39`, 23:32 CT), not in the plan commit.
+
+**Known errors in the text above.**
+
+4. **Timing.** Line 3 says the plan was written "before any LLM judge or attacker was run". The pilot (see Pilot) ran
+   both before the plan was committed: 45 model calls are cached with file times before 17:15 CT (24 Sonnet, 15 Haiku,
+   6 Nemotron). The prompts did not change afterwards, so 36 of those cached replies were reused as they were by the
+   full run: every call for the three pilot cards (32), and the Nemotron A1 and A2 rewrites of two further cards, one
+   of them the #15 post (4). The Pilot section's "on the same cards" is also loose: the cached Nemotron rewrites from
+   the pilot cover one of the three pilot cards, not all three. File times, like git dates, are self-reported.
+5. **"Stays on this machine."** The raw snapshot, the cache and all per-card outputs stayed on this machine and out
+   of git, but card text did leave it. For each card, the agent, kind, destination, standing claim, title and the
+   first 2,400 characters of the body were sent to Anthropic through Claude Code (`claude -p`) for every Sonnet and
+   Haiku judge call and for the A2c attacker, and the title alone for the C1 paraphrase. The same card text went to
+   the lab's Nemotron server for the A1 and A2 attacks. This text includes recipients' phone numbers and email
+   addresses (19 destinations hold a phone number and 11 an email address). No card text was published.
+6. **Number of judges.** Judges says "All four". There are five: rule-pre, rule-post, effect, and two Claude judges
+   (Sonnet, and Haiku as the secondary variant named in judge 3). Every verdict row has all five, and RESULTS
+   reports all five.
+7. **Person-decided cards.** Known limits says "69 person-decided cards". The count is 57 (25 stopped, 32 passed), as
+   stated under Data and used in RESULTS. 69 is the number of decisions recorded "by joseph"; 12 of those were
+   made by Autopilot (`decidedVia` is `autopilot`), which the label definition excludes.
+8. **Same model family.** Known limits says the attacker and the LLM judge are the same model family. That holds only
+   for A2c. The primary attacker for A1 and A2 is Nemotron, as Conditions and Pilot already say.
+9. **Deviations.** "None yet" was true when the plan was committed. The five deviations under it were added in the
+   results commit (`b3f1e39`); that they were logged before any result was used is the author's record, not something
+   the history can show.
+10. **Self-consistency.** Only Sonnet's rerun is pre-registered. `src/run.py`, as committed with the plan, also runs
+    Haiku twice on C0; that figure is reported in RESULTS as exploratory.
+11. **Public constitution file.** `classifier/constitution.json` replaces the owners' names with roles. This changes
+    one class description (`product.launch`) in the class list the Claude judges saw, so the public prompts differ by
+    those words from the ones that were run. The rule and effect verdicts reproduce exactly from the public code
+    (checked on all five conditions, 2026-11-08).

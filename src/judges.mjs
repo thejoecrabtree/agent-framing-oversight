@@ -1,4 +1,5 @@
-// The four judges. Each names a class; the Lab's own judge() turns the class into a verdict.
+// The five judges: rule-pre, rule-post and effect here, plus one Claude judge per class file passed in (the study
+// passed two, Sonnet and Haiku). Each names a class; the Lab's own judge() turns the class into a verdict.
 //   node src/judges.mjs <condition.jsonl> [llm-classes.json ...] > verdicts.jsonl
 // rule-pre and rule-post import the gateway code at two commits (classifier/pre = 77f2edb, classifier/post = e2368a7).
 // Both read the same constitution file (identical at the two commits).
